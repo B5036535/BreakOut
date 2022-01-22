@@ -1,6 +1,9 @@
 #pragma once
 #include "CollisionDetection.h"
+#include "PhysicsObject.h"
+
 #include <vector>
+
 class PhysicsSystem
 {
 public:
@@ -25,4 +28,7 @@ private:
 	void ResolveCollision();
 
 	void IntergrateVelocities(float dt);
+
+	std::vector<PhysicsObject>Balls;
+	std::vector<PhysicsObject>Blocks;
 };

@@ -6,7 +6,7 @@ class CollisionCircle : public CollisionVolume
 public:
 	CollisionCircle()
 	{
-		type = VolumeType::CIRCLE;
+
 	}
 
 	~CollisionCircle()
@@ -19,7 +19,6 @@ public:
 		radius *= delta;
 	}
 
-private:
-
 	float radius;
+private:
 };

@@ -11,12 +11,5 @@ public:
 
 	}
 
-	enum VolumeType
-	{
-		BOX, CIRCLE
-	};
-
-	VolumeType type;
-
 	virtual void UpdateDimensions(float delta) = 0;
 };

@@ -1,13 +1,12 @@
 #pragma once
-#include <glm/vec2.hpp>
-
+#include "Transform.h"
 #include "PhysicsObject.h"
 class GameObject
 {
 public:
 	GameObject()
 	{
-		physicsObject = new PhysicsObject(this);
+		physicsObject = new PhysicsObject(&transform);
 	}
 
 	virtual ~GameObject()
@@ -17,5 +16,5 @@ public:
 
 protected:
 	PhysicsObject* physicsObject;
-	glm::vec2 position;
+	Transform transform;
 };

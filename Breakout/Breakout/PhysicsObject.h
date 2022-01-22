@@ -1,16 +1,18 @@
 #pragma once
-#include "CollisionVolume.h"
 #include <glm/vec2.hpp>
 
 class GameObject;
+class CollisionVolume;
+struct Transform;
 
 class PhysicsObject
 {
 public:
-	PhysicsObject(GameObject* go)
+	PhysicsObject(Transform* transf)
 	{
 		active = true;
-		gameObject = go;
+
+		transform = transf;
 	}
 
 	virtual ~PhysicsObject()
@@ -18,19 +20,21 @@ public:
 
 	}
 
-	GameObject* gameObject;
 
 	bool active;
+
 	CollisionVolume* collisionVolume;
+
 	float invMass;
 	float elasticity;
+
 	glm::vec2 force;
 	glm::vec2 velocity;
-	glm::vec2 position;
+
+	Transform* transform;
 
 	void ApplyLinearImpulse(glm::vec2 impulse)
 	{
 		velocity += impulse * invMass;
 	}
-
 };

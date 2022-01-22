@@ -1,20 +1,19 @@
 #pragma once
 #include "GameObject.h"
+#include "CollisionCircle.h"
 
-class PhysicsObject;
 class Ball : public GameObject
 {
 public:
 	Ball()
 	{
-
+		physicsObject->collisionVolume = new CollisionCircle();
 	}
 
 	~Ball()
 	{
-		delete physObj;
+		delete physicsObject->collisionVolume;
 	}
 protected:
 	float init_speed = 0.1f;
-	PhysicsObject* physObj;
 };

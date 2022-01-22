@@ -1,12 +1,11 @@
 #pragma once
 #include "CollisionVolume.h"
-
+#include <glm/vec2.hpp>
 class CollisionBox : public CollisionVolume
 {
 public: 
 	CollisionBox() 
 	{
-		type = VolumeType::BOX;
 	}
 
 	~CollisionBox()
@@ -16,9 +15,9 @@ public:
 
 	void UpdateDimensions(float delta)
 	{
-		halfDimensions[0] *= delta;
-		halfDimensions[1] *= delta;
+		halfDimensions.x *= delta;
+		halfDimensions.y *= delta;
 	}
+	glm::vec2 halfDimensions;
 private:
-	float halfDimensions[2];
 };
