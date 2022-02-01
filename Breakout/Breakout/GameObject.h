@@ -1,11 +1,13 @@
 #pragma once
 #include "Transform.h"
 #include "PhysicsObject.h"
+
 class GameObject
 {
 public:
 	GameObject()
 	{
+		active = true;
 		physicsObject = new PhysicsObject(&transform);
 	}
 
@@ -14,7 +16,9 @@ public:
 		delete physicsObject;
 	}
 
-protected:
-	PhysicsObject* physicsObject;
+	virtual void WhenCollided(int col) = 0;
+
+	bool active;
 	Transform transform;
+	PhysicsObject* physicsObject;
 };

@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.189.2\Include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glfw-3.3.5.bin.WIN64\include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Jake\Documents\Visual Studio 2019\Libraries\stb-master;C:\VulkanSDK\1.2.189.2\Include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glfw-3.3.5.bin.WIN64\include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -91,7 +91,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.189.2\Include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glfw-3.3.5.bin.WIN64\include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Jake\Documents\Visual Studio 2019\Libraries\stb-master;C:\VulkanSDK\1.2.189.2\Include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glfw-3.3.5.bin.WIN64\include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -108,7 +108,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.189.2\Include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glfw-3.3.5.bin.WIN64\include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Jake\Documents\Visual Studio 2019\Libraries\stb-master;C:\VulkanSDK\1.2.189.2\Include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glfw-3.3.5.bin.WIN64\include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -127,7 +127,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.189.2\Include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glfw-3.3.5.bin.WIN64\include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Jake\Documents\Visual Studio 2019\Libraries\stb-master;C:\VulkanSDK\1.2.189.2\Include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glfw-3.3.5.bin.WIN64\include;C:\Users\Jake\Documents\Visual Studio 2019\Libraries\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -143,6 +143,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PhysicsSystem.cpp" />
+    <ClCompile Include="Renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
@@ -156,6 +157,7 @@
     <ClInclude Include="PhysicsObject.h" />
     <ClInclude Include="PhysicsSystem.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Renderer.h" />
     <ClInclude Include="Transform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

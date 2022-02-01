@@ -2,6 +2,11 @@
 class CollisionVolume
 {
 public:
+
+	enum VolumeType {BOX, CIRCLE};
+
+	VolumeType type;
+
 	CollisionVolume()
 	{
 	}

@@ -4,8 +4,10 @@
 class CollisionBox : public CollisionVolume
 {
 public: 
-	CollisionBox() 
+	CollisionBox(glm::vec2 dim) 
 	{
+		type = VolumeType::BOX;
+		halfDimensions = dim;
 	}
 
 	~CollisionBox()

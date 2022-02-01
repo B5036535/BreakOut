@@ -3,32 +3,29 @@
 #include "PhysicsObject.h"
 
 #include <vector>
-
+class Game;
 class PhysicsSystem
 {
 public:
-	PhysicsSystem()
+	PhysicsSystem(Game* g)
 	{
-
-		collisionDetection = new CollisionDetection();
+		game = g;
 	}
 
 	~PhysicsSystem()
 	{
-		delete collisionDetection;
 	}
 
 	void PhysicsUpdate(float dt);
 private:
-	CollisionDetection* collisionDetection;
+	CollisionDetection collisionDetection;
 
 	void CollisionCheck();
 	void BroadPhase();
 	void NarrowPhase();
-	void ResolveCollision();
+	void ResolveCollision(CollisionInfo* info);
 
 	void IntergrateVelocities(float dt);
 
-	std::vector<PhysicsObject>Balls;
-	std::vector<PhysicsObject>Blocks;
+	Game* game;
 };

@@ -37,7 +37,7 @@ public:
 	PhysicsObject* currentPhysA;
 	PhysicsObject* currentPhysB;
 
-	bool HandleCollision(PhysicsObject* physA, PhysicsObject physB);
+	bool HandleCollision(PhysicsObject* physA, PhysicsObject* physB);
 private:
 	void FillCurrentInfo(PhysicsObject* physA, PhysicsObject* physB, glm::vec2 normal, float penetration);
 

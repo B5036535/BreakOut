@@ -10,8 +10,7 @@ class PhysicsObject
 public:
 	PhysicsObject(Transform* transf)
 	{
-		active = true;
-
+		collision = CollisionTag::NONE;
 		transform = transf;
 	}
 
@@ -20,13 +19,14 @@ public:
 
 	}
 
-
-	bool active;
+	enum CollisionTag {NONE = 0,PLAYER = 1, BLOCK = 2, BALL = 3};
+	CollisionTag collision;
+	CollisionTag Tag;
 
 	CollisionVolume* collisionVolume;
 
-	float invMass;
-	float elasticity;
+	float invMass = 0.f;
+	float elasticity = 1.3f;
 
 	glm::vec2 force;
 	glm::vec2 velocity;

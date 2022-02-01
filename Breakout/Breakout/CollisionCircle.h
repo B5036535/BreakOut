@@ -4,9 +4,10 @@
 class CollisionCircle : public CollisionVolume
 {
 public:
-	CollisionCircle()
+	CollisionCircle(float r)
 	{
-
+		type = VolumeType::CIRCLE;
+		radius = r;
 	}
 
 	~CollisionCircle()
