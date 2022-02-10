@@ -1,8 +1,6 @@
 #pragma once
 #include "CollisionDetection.h"
-#include "PhysicsObject.h"
 
-#include <vector>
 class Game;
 class PhysicsSystem
 {
@@ -28,4 +26,6 @@ private:
 	void IntergrateVelocities(float dt);
 
 	Game* game;
+
+	const float MAX_SPEED = 50.f;
 };

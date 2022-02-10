@@ -72,11 +72,13 @@ private:
 	std::vector<VkFramebuffer> swapChainFramebuffers;
 
 	VkRenderPass renderPass;
-	VkDescriptorSetLayout descriptorSetLayout;
+
 	VkPipelineLayout pipelineLayout_block;
 	VkPipelineLayout pipelineLayout_ball;
+	VkPipelineLayout pipelineLayout_gameState;
 	VkPipeline graphicsPipeline_block;
 	VkPipeline graphicsPipeline_ball;
+	VkPipeline graphicsPipeline_gameState;
 
 	VkCommandPool commandPool;
 
@@ -88,11 +90,13 @@ private:
 	VkDeviceMemory depthImageMemory;
 	VkImageView depthImageView;
 
+	enum TextureType {BALL = 0, PAUSED = 1, WON = 2, LOST = 3};
+
 	uint32_t mipLevels;
-	VkImage textureImage;
-	VkDeviceMemory textureImageMemory;
-	VkImageView textureImageView;
-	VkSampler textureSampler;
+	VkImage textureImages[4];
+	VkDeviceMemory textureImageMemorys[4];
+	VkImageView textureImageViews[4];
+	VkSampler textureSamplers[2];
 
 	VkBuffer vertexBuffer;
 	VkDeviceMemory vertexBufferMemory;
@@ -102,8 +106,11 @@ private:
 	std::vector<VkBuffer> uniformBuffers;
 	std::vector<VkDeviceMemory> uniformBuffersMemory;
 
-	VkDescriptorPool descriptorPool;
-	std::vector<VkDescriptorSet> descriptorSets;
+	VkDescriptorPool descriptorPool[2];
+	std::vector<VkDescriptorSet> descriptorSets_ball;
+	std::vector<VkDescriptorSet> descriptorSets_gameState;
+	VkDescriptorSetLayout descriptorSetLayout_ball;
+	VkDescriptorSetLayout descriptorSetLayout_gameState;
 
 	std::vector<VkCommandBuffer> commandBuffers;
 
@@ -142,10 +149,12 @@ private:
 
 	void CreateRenderPass();
 
-	void CreateDescriptorSetLayout();
+	void CreateDescriptorSetLayout_ball();
+	void CreateDescriptorSetLayout_gameState();
 
 	void CreateGraphicsPipeline_block();
 	void CreateGraphicsPipeline_ball();
+	void CreateGraphicsPipeline_gameState();
 
 	void CreateFramebuffers();
 
@@ -161,15 +170,17 @@ private:
 
 	bool HasStencilComponent(VkFormat format);
 
-	void CreateTextureImage();
+	void CreateTextureImage(std::string texturePath, int i);
 
 	void GenerateMipmaps(VkImage image, VkFormat imageFormat, int32_t texWidth, int32_t texHeight, uint32_t mipLevels);
 
 	VkSampleCountFlagBits GetMaxUsableSampleCount();
 
-	void CreateTextureImageView();
+	void CreateTextures();
 
-	void CreateTextureSampler();
+	void CreateTextureImageView(int i);
+
+	void CreateTextureSampler(int i);
 
 	VkImageView CreateImageView(VkImage image, VkFormat format, VkImageAspectFlags aspectFlags, uint32_t mipLevels);
 
@@ -187,7 +198,9 @@ private:
 
 	void CreateDescriptorPool();
 
-	void CreateDescriptorSets();
+	void CreateDescriptorSets_ball();
+	void CreateDescriptorSets_gameState();
+	void UpdateDescriptorSets_gameState(TextureType type);
 
 	void CreateBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties, VkBuffer& buffer, VkDeviceMemory& bufferMemory);
 

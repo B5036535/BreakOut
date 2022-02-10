@@ -11,6 +11,9 @@ public:
 		transform.position = pos;
 		transform.scale = { 5.f, 1.f };
 		physicsObject->collisionVolume = new CollisionBox({ transform.scale.x / 2.f, transform.scale.y / 2.f });
+		physicsObject->tag = PhysicsObject::CollisionTag::PLAYER;
+
+		colour = { 0.2f, 0.2f, 1.f, 1.f };
 	}
 
 	~Player()
@@ -34,10 +37,11 @@ public:
 		physicsObject->collision = PhysicsObject::CollisionTag::NONE;
 	}
 
+
 	const float MAX_DIST;
 
 private:
 	GLFWwindow* window;
 
-	const float SPEED = 3.f;
+	const float SPEED = 40.f;
 };

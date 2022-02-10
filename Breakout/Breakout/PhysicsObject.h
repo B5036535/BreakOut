@@ -19,14 +19,15 @@ public:
 
 	}
 
-	enum CollisionTag {NONE = 0,PLAYER = 1, BLOCK = 2, BALL = 3};
+	enum CollisionTag {NONE = 0,PLAYER = 1, BLOCK = 2, BALL = 3, POWERUP = 4, KILL_FLOOR = 5};
+
 	CollisionTag collision;
-	CollisionTag Tag;
+	CollisionTag tag;
 
 	CollisionVolume* collisionVolume;
 
 	float invMass = 0.f;
-	float elasticity = 1.3f;
+	float elasticity = 1.02f;
 
 	glm::vec2 force;
 	glm::vec2 velocity;
