@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Block.cpp" />
     <ClCompile Include="CollisionDetection.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PhysicsSystem.cpp" />
+    <ClCompile Include="PowerUps.cpp" />
     <ClCompile Include="Renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +159,7 @@
     <ClInclude Include="PhysicsObject.h" />
     <ClInclude Include="PhysicsSystem.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PowerUps.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Transform.h" />
   </ItemGroup>

@@ -15,9 +15,9 @@ public:
 
 	}
 
-	void UpdateDimensions(float delta)
+	void UpdateDimensions(float r)
 	{
-		radius *= delta;
+		radius = r;
 	}
 
 	float radius;

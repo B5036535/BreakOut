@@ -1,7 +1,7 @@
 #pragma once
 #include "Transform.h"
 #include "PhysicsObject.h"
-
+#include <glm/vec4.hpp>
 class GameObject
 {
 public:
@@ -17,8 +17,10 @@ public:
 	}
 
 	virtual void WhenCollided(int col) = 0;
-
 	bool active;
 	Transform transform;
 	PhysicsObject* physicsObject;
+
+	glm::vec4 colour;
+protected:
 };

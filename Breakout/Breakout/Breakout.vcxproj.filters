@@ -25,6 +25,9 @@
     <Filter Include="Graphics">
       <UniqueIdentifier>{2653e370-db1c-45c4-a508-e1450d680f48}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\PowerUps">
+      <UniqueIdentifier>{627a62cb-b83d-40b9-91f2-ec1b81c2225e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -41,6 +44,12 @@
     </ClCompile>
     <ClCompile Include="Renderer.cpp">
       <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerUps.cpp">
+      <Filter>Game\PowerUps</Filter>
+    </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="Renderer.h">
       <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerUps.h">
+      <Filter>Game\PowerUps</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
