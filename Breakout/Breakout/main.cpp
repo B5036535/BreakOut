@@ -16,12 +16,10 @@ int main()
 
 	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Breakout", nullptr, nullptr);
 	Game g(window, WIDTH, HEIGHT);
-	//glfwSetWindowUserPointer(window, this);
 
 
 	
 	auto previousTime = std::chrono::high_resolution_clock::now();
-	//figure this out
 	while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS)
 	{
 		auto currentTime = std::chrono::high_resolution_clock::now();
