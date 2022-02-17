@@ -1839,7 +1839,7 @@ void Renderer::DrawFrame()
 	vkCmdBindVertexBuffers(cmd, 0, 1, vertexBuffers, offsets);
 	vkCmdBindIndexBuffer(cmd, indexBuffer, 0, VK_INDEX_TYPE_UINT16);
 
-	VkDescriptorSet descriptorSets[2] = { descriptorSets_ball[imageIndex], descriptorSets_ball[imageIndex] };
+	VkDescriptorSet descriptorSets[2] = { descriptorSets_ball[imageIndex], descriptorSets_gameState[imageIndex] };
 
 	vkCmdBindPipeline(cmd, VK_PIPELINE_BIND_POINT_GRAPHICS, graphicsPipeline_block);
 	vkCmdBindDescriptorSets(cmd, VK_PIPELINE_BIND_POINT_GRAPHICS, pipelineLayout_block, 0, 1, &descriptorSets_ball[imageIndex], 0, nullptr);
