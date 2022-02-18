@@ -16,7 +16,7 @@ void Block::WhenCollided(int col)
 
 void Block::SpawnPowerUp()
 {
-	int rnd = rand() % 99;
+	int rnd = rand() % 100;
 	
 	if (rnd < 10)
 	{
