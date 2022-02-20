@@ -76,13 +76,13 @@ private:
 	const glm::vec2 BLOCK_OFFSET = { -30.f, 10.f };
 	const glm::vec2 BLOCK_SCALE = { 5.f, 1.f };
 
-	/////Debug Setup
-	///const int NUM_OF_ROWS = 1;
-	///const int NUM_OF_COLS = 1;
-	///const int MAX_SCORE = NUM_OF_COLS * NUM_OF_ROWS;
-	///const glm::vec2 BLOCK_SPACING = { 6.0f, 2.5f };
-	///const glm::vec2 BLOCK_OFFSET = { 0.f, 10.f };
-	///const glm::vec2 BLOCK_SCALE = { 30.f, 1.f };
+	////Debug Setup
+	//const int NUM_OF_ROWS = 3;
+	//const int NUM_OF_COLS = 1;
+	//const int MAX_SCORE = NUM_OF_COLS * NUM_OF_ROWS;
+	//const glm::vec2 BLOCK_SPACING = { 6.0f, 2.5f };
+	//const glm::vec2 BLOCK_OFFSET = { 0.f, 10.f };
+	//const glm::vec2 BLOCK_SCALE = { 30.f, 1.f };
 
 	const glm::vec2 BALL_OFFSET = { 0, -5.f};
 

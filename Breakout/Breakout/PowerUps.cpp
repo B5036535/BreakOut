@@ -27,6 +27,7 @@ void PowerUp_MultiBall::WhenCollided(int col)
 		{
 			Ball* ball = new Ball({ transform.position.x + offset,  game->PLAYER_SPAWN.y + 3.f }, -70.f, 70.f);
 			game->new_balls.push_back(ball);
+			game->ballCounter++;
 			offset += 3.f;
 		}
 		active = false;

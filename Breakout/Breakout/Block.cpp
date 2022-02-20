@@ -22,6 +22,7 @@ void Block::SpawnPowerUp()
 	{
 		int rndStart = rand() % game->powerUps.size();
 		
+		
 		auto it = std::find_if(game->powerUps.begin() + rndStart, game->powerUps.end(), [&](PowerUp* p) -> bool {return !p->active; });
 		if (it != game->powerUps.end())
 		{
