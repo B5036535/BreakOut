@@ -26,19 +26,19 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
-const std::string TEXTURE_PATH_BALL = "textures/ball.png";
-const std::string TEXTURE_PATH_PAUSED = "textures/paused.png";
-const std::string TEXTURE_PATH_WON = "textures/won.png";
-const std::string TEXTURE_PATH_LOST = "textures/lost.png";
+const static std::string TEXTURE_PATH_BALL = "textures/ball.png";
+const static std::string TEXTURE_PATH_PAUSED = "textures/paused.png";
+const static std::string TEXTURE_PATH_WON = "textures/won.png";
+const static std::string TEXTURE_PATH_LOST = "textures/lost.png";
 
-const int MAX_FRAMES_IN_FLIGHT = 2;
+const static int MAX_FRAMES_IN_FLIGHT = 2;
 
-const std::vector<const char*> validationLayers =
+const static std::vector<const char*> validationLayers =
 {
 	"VK_LAYER_KHRONOS_validation"
 };
 
-const std::vector<const char*> deviceExtensions =
+const static std::vector<const char*> deviceExtensions =
 {
 	VK_KHR_SWAPCHAIN_EXTENSION_NAME
 };
@@ -99,7 +99,7 @@ struct Vertex
 		return pos == other.pos && texCoord == other.texCoord;
 	}
 };
-std::vector<Vertex> vertices =
+static std::vector<Vertex> vertices =
 {
 	{{-0.5f, -0.5f, 0.0f}, {0.0f, 1.0f}},
 	{{0.5f, -0.5f, 0.0f},  {1.0f, 1.0f}},
@@ -107,7 +107,7 @@ std::vector<Vertex> vertices =
 	{{-0.5f, 0.5f, 0.0f},  {0.0f, 0.0f}},
 };
 
-std::vector<uint16_t> indices =
+static std::vector<uint16_t> indices =
 {
 	 0, 1, 2, 2, 3, 0,
 };
